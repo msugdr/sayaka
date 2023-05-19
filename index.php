@@ -57,6 +57,6 @@ post_message($comment);
 ?>
 <form methode="get" action="index.php">
   <input type="text" name="comment">
-  <input type="submit" value="PUSH">
+  <input type="submit" value="PUSH">!!
   </body>
 </html>
