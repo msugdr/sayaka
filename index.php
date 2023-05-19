@@ -30,8 +30,30 @@ function post_message($message){
     }
     return true;
 }
-
+function sql_query($sql) {
+    echo "<div class='code' >".$sql."</div>\n";
+    $server   = "youna-databese.database.windows.net";
+    $user     = "youna";
+    $pass     = " ledsql123#";
+    $database = "youna_sql";
+    $echarset = "utf8";
+    try {
+        $pdo = new PDO("mysql:host=" . $server . "; dbname=".$database.";charset=".$echarset,$user,$pass,
+        [   PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+                    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+        ]);
+        $res = $pdo->query($sql);
+        return $res;
+    } 
+    catch(PDOException $e) {
+        echo 'Error:'.$e.'<br>';
+        ('Error:'.$e->getMessage());
+        die();
+    }	
+}
 post_message($comment);
+    $sql = "SELECT * FROM products";
+    echo (sql_query($sql));
 ?>
 <form methode="get" action="index.php">
   <input type="text" name="comment">
