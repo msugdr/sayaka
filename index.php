@@ -3,7 +3,8 @@
   <body>
     <h1>SAYAKA</h1> 
 <?php
-echo "I love you.";
+$comment = $_GET['comment']
+echo " You say " . $comment;
 ?>
     <div>
       <a href="a.html"><img src="girl.png" width="200px"></a>
