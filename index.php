@@ -3,6 +3,8 @@
   <body>
     <h1>SAYAKA</h1> 
 <?php
+$comment = $_GET['comment'];
+echo " I send you '" . $comment . "'";
 define('LINE_API_URL'  ,'https://notify-api.line.me/api/notify');
 define('LINE_API_TOKEN','0maOvAs8dtXu8h7eEPMXGk2VqMcj6LEztSP9C7kudOg');
 
@@ -29,7 +31,7 @@ function post_message($message){
     return true;
 }
 
-post_message('テスト投稿');
+post_message($comment);
 ?>
 <form methode="get" action="index.php">
   <input type="text" name="comment">
