@@ -6,8 +6,8 @@
 echo "I love you.";
 ?>
     <div>
-      <a><href="a.html"><img src="girl.png" width="200px"></a>
+      <a href="a.html"><img src="girl.png" width="200px"></a>
     </div>
-      <a><href="a.php">PHP</a>
+      <a href="a.php">PHP</a>
   </body>
 </html>
