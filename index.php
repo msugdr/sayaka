@@ -3,12 +3,11 @@
   <body>
     <h1>SAYAKA</h1> 
 <?php
-$comment = $_GET['comment']
+$comment = $_GET['comment'];
 echo " You say " . $comment;
 ?>
-    <div>
-      <a href="a.html"><img src="girl.png" width="200px"></a>
-    </div>
-      <a href="a.php">PHP</a>
+<form methode="get" action="index.php">
+  <input type="text" name="comment">
+  <input type="submit" value="PUSH">
   </body>
 </html>
