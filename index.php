@@ -53,7 +53,7 @@ function sql_query($sql) {
 }
 post_message($comment);
     $sql = "SELECT * FROM products";
-    echo (sql_query($sql));
+    $res = sql_query($sql));
 ?>
 <form methode="get" action="index.php">
   <input type="text" name="comment">
