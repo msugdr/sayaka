@@ -33,9 +33,12 @@ try {
     $sql = "SELECT * FROM member";
     $res = $conn->query($sql);
     $data = $res->fetchAll();
-    echo $data[0]['sid'] . " " . $data[0]['name'] . "<br>";
-    echo $data[1]['sid'] . " " . $data[1]['name'] . "<br>";
-    echo $data[2]['sid'] . " " . $data[2]['name'] . "<br>";
+    for ($i=0; $i< $data.length; $i++) {
+        echo $data[0]['sid'] . " " . $data[$i]['name'] . "<br>";
+    }
+//    echo $data[0]['sid'] . " " . $data[0]['name'] . "<br>";
+//    echo $data[1]['sid'] . " " . $data[1]['name'] . "<br>";
+//    echo $data[2]['sid'] . " " . $data[2]['name'] . "<br>";
 }
 catch (PDOException $e) {
     print("Error connecting to SQL Server.");
