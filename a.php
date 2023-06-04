@@ -33,7 +33,7 @@ try {
     $sql = "SELECT * FROM member";
     $res = $conn->query($sql);
     $data = $res->fetchAll();
-    for ($i=0; $i< $data.length; $i++) {
+    for ($i=0; $i < count($data); $i++) {
         echo $data[0]['sid'] . " " . $data[$i]['name'] . "<br>";
     }
 //    echo $data[0]['sid'] . " " . $data[0]['name'] . "<br>";
