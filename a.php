@@ -6,8 +6,8 @@ try {
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
  　 echo "Connection succesfully<br>";
     $sql="SELECT * FROM member;";
-    $res = $conn->query($sql);
-    echo $res;
+//    $res = $conn->query($sql);
+//    echo $res;
 }
 catch (PDOException $e) {
     print("Error connecting to SQL Server.");
