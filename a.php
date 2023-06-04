@@ -31,8 +31,8 @@ try {
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     echo "Connection succesfully<br>";
     $sql = "SELECT * FROM member";
-//    $res = $conn->query($sql);
-//    $data = $res->fetchAll();
+    $res = $conn->query($sql);
+    $data = $res->fetchAll();
 //    echo $data[0]['sid'] . " " . $data[0]['name'] . "<br>";
 //    echo $data[1]['sid'] . " " . $data[1]['name'] . "<br>";
 //    echo $data[2]['sid'] . " " . $data[2]['name'] . "<br>";
