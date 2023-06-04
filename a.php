@@ -9,13 +9,13 @@ try {
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     echo "<p>SUCCESS</p>";
     $sql = "SELECT * FROM member";
-    $res = $conn ->query($sql);
-    echo $res[0][0];
-    echo $res[0][1];
-    echo $res[0][2];
-    echo $res[1][0];
-    echo $res[1][1];
-    echo $res[1][2];
+ $getResults= sqlsrv_query($conn, $sql);
+    echo ("Reading data from table" . PHP_EOL);
+    if ($getResults == FALSE)
+        echo (sqlsrv_errors());
+    while ($row = sqlsrv_fetch_array($getResults, SQLSRV_FETCH_ASSOC)) {
+     echo ($row['sid'] . " " . $row['name'] . PHP_EOL);
+    }
 }
 catch (PDOException $e) {
     print("Error connecting to SQL Server.");
