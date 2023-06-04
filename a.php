@@ -4,7 +4,9 @@ This is a.php<br>
 try {
     $conn = new PDO("sqlsrv:server = tcp:xana-database.database.windows.net,1433; Database = xana_sql", "youna", "ledsql123#");
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-  echo "Connection succesfully";
+ 　 echo "Connection succesfully<br>";
+    $res = $conn->query($sql);
+    echo $res;
 }
 catch (PDOException $e) {
     print("Error connecting to SQL Server.");
