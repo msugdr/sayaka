@@ -10,7 +10,7 @@ try {
     echo "<p>SUCCESS</p>";
     $sql = "SELECT * FROM member";
     $res = $conn ->query($sql);
-    
+    echo $res[0][0];
 }
 catch (PDOException $e) {
     print("Error connecting to SQL Server.");
