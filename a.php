@@ -11,6 +11,11 @@ try {
     $sql = "SELECT * FROM member";
     $res = $conn ->query($sql);
     echo $res[0][0];
+    echo $res[0][1];
+    echo $res[0][2];
+    echo $res[1][0];
+    echo $res[1][1];
+    echo $res[1][2];
 }
 catch (PDOException $e) {
     print("Error connecting to SQL Server.");
