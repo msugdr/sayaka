@@ -1,3 +1,6 @@
+<!DOCTYPE html>
+<html>
+<body>
 This is a.php
 <?php
 // PHP Data Objects(PDO) Sample Code:
@@ -10,3 +13,5 @@ catch (PDOException $e) {
     die(print_r($e));
 }
 ?>
+</body>
+</html>
